@@ -1,13 +1,18 @@
-int global=1;
-int main()
-{
-    int a,b,c;
-    global = 0;
-    a = 2;
-    b = 2;
-    func_a(c);
+static int global=1;
+int func(){
+    
+    return 0;
 }
 
-int func_a(int x){
+int funcaaa(){
     return 0;
- }
+}
+
+int main(){
+    funcaaa();
+    int a;
+    global = 0;
+    a = 2;
+    func();
+}
+

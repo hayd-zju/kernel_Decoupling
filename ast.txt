@@ -1,0 +1,41 @@
+TranslationUnitDecl 0x55f7ef9aee18 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x55f7ef9af640 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x55f7ef9af3e0 '__int128'
+|-TypedefDecl 0x55f7ef9af6b0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x55f7ef9af400 'unsigned __int128'
+|-TypedefDecl 0x55f7ef9af9b8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x55f7ef9af790 'struct __NSConstantString_tag'
+|   `-Record 0x55f7ef9af708 '__NSConstantString_tag'
+|-TypedefDecl 0x55f7ef9afa50 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x55f7ef9afa10 'char *'
+|   `-BuiltinType 0x55f7ef9aeec0 'char'
+|-TypedefDecl 0x55f7ef9afd48 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag[1]'
+| `-ConstantArrayType 0x55f7ef9afcf0 'struct __va_list_tag[1]' 1 
+|   `-RecordType 0x55f7ef9afb30 'struct __va_list_tag'
+|     `-Record 0x55f7ef9afaa8 '__va_list_tag'
+|-VarDecl 0x55f7efa06140 <test_c.c:1:1, col:19> col:12 used global 'int' static cinit
+| `-IntegerLiteral 0x55f7efa061f0 <col:19> 'int' 1
+|-FunctionDecl 0x55f7efa06260 <line:2:1, line:5:1> line:2:5 used func 'int ()'
+| `-CompoundStmt 0x55f7efa06330 <col:11, line:5:1>
+|   `-ReturnStmt 0x55f7efa06320 <line:4:5, col:12>
+|     `-IntegerLiteral 0x55f7efa06300 <col:12> 'int' 0
+|-FunctionDecl 0x55f7efa06370 <line:7:1, line:9:1> line:7:5 used funcaaa 'int ()'
+| `-CompoundStmt 0x55f7efa06440 <col:14, line:9:1>
+|   `-ReturnStmt 0x55f7efa06430 <line:8:5, col:12>
+|     `-IntegerLiteral 0x55f7efa06410 <col:12> 'int' 0
+`-FunctionDecl 0x55f7efa06480 <line:11:1, line:17:1> line:11:5 main 'int ()'
+  `-CompoundStmt 0x55f7efa06750 <col:11, line:17:1>
+    |-CallExpr 0x55f7efa06580 <line:12:5, col:13> 'int'
+    | `-ImplicitCastExpr 0x55f7efa06568 <col:5> 'int (*)()' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x55f7efa06520 <col:5> 'int ()' Function 0x55f7efa06370 'funcaaa' 'int ()'
+    |-DeclStmt 0x55f7efa06620 <line:13:5, col:10>
+    | `-VarDecl 0x55f7efa065b8 <col:5, col:9> col:9 used a 'int'
+    |-BinaryOperator 0x55f7efa06678 <line:14:5, col:14> 'int' '='
+    | |-DeclRefExpr 0x55f7efa06638 <col:5> 'int' lvalue Var 0x55f7efa06140 'global' 'int'
+    | `-IntegerLiteral 0x55f7efa06658 <col:14> 'int' 0
+    |-BinaryOperator 0x55f7efa066d8 <line:15:5, col:9> 'int' '='
+    | |-DeclRefExpr 0x55f7efa06698 <col:5> 'int' lvalue Var 0x55f7efa065b8 'a' 'int'
+    | `-IntegerLiteral 0x55f7efa066b8 <col:9> 'int' 2
+    `-CallExpr 0x55f7efa06730 <line:16:5, col:10> 'int'
+      `-ImplicitCastExpr 0x55f7efa06718 <col:5> 'int (*)()' <FunctionToPointerDecay>
+        `-DeclRefExpr 0x55f7efa066f8 <col:5> 'int ()' Function 0x55f7efa06260 'func' 'int ()'
